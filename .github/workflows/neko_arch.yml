@@ -9,21 +9,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        #os: [ubuntu-20.04, macos-12]
-        os: [ubuntu-20.04]
+        os: [ubuntu-20.04, macos-12]
         compiler: [gfortran-10, gfortran-11, gfortran-12]
         exclude:
-        - os: ubuntu-20.04
-          compiler: gfortran-11
-        - os: ubuntu-20.04
-          compiler: gfortran-12
         - os: macos-12
           compiler: gfortran-10
         include:
-        - os: ubuntu-20.04
-          setup-env: sudo apt-get update && sudo apt-get install -y make git m4 python3
         - os: macos-12
-          setup-env: brew install automake && brew install gcc@11 && brew install gcc@12
+          setup-env: brew install gcc@11 && brew install gcc@12
     env:
       FC: ${{ matrix.compiler }}
     name: ${{ matrix.os }} / ${{ matrix.compiler }}
