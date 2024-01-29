@@ -1107,7 +1107,7 @@
         me%escape_solidus = escape_solidus
     end if
 
-    ! how to handle null to read conversions:
+    ! how to handle null to real conversions:
     if (present(null_to_real_mode)) then
         select case (null_to_real_mode)
         case(1_IK:3_IK)
@@ -1289,7 +1289,7 @@
 !     implicit none
 !     type(json_core) :: json
 !     type(json_value),pointer :: j1, j2
-!     call json%load('../files/inputs/test1.json',j1)
+!     call json%load('files/inputs/test1.json',j1)
 !     call json%clone(j1,j2) !now have two independent copies
 !     call json%destroy(j1)  !destroys j1, but j2 remains
 !     call json%print(j2,'j2.json')
