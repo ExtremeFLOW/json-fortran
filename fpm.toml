@@ -1,6 +1,6 @@
 name = "json-fortran"
 author = "Jacob Williams"
-copyright  = "Copyright (c) 2014-2021, Jacob Williams"
+copyright  = "Copyright (c) 2014-2024, Jacob Williams"
 license = "BSD"
 description = "A Modern Fortran JSON API"
 homepage = "https://github.com/jacobwilliams/json-fortran"
@@ -257,3 +257,13 @@ main       = "jf_test_48.F90"
 name       = "jf_test_49"
 source-dir = "src/tests"
 main       = "jf_test_49.F90"
+
+[[test]]
+name       = "jf_test_50"
+source-dir = "src/tests"
+main       = "jf_test_50.F90"
+
+[[test]]
+name       = "jf_test_51"
+source-dir = "src/tests"
+main       = "jf_test_51.F90"
